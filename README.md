@@ -8,3 +8,4 @@ For example, we can easily tell the difference between 500 and 1000 Hz, but we w
 In 1937, Stevens, Volkmann, and Newmann proposed a unit of pitch such that equal distances in pitch sounded equally distant to the listener. 
 This is called the mel scale. We perform a mathematical operation on frequencies to convert them to the mel scale. 
 - reference: [understanding the mel spectrogram](https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53)
+![frequency-to-melscale](https://github.com/krazyjoy/AI_CUP/blob/master/images/mel_scale.PNG)
