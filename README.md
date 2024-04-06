@@ -1,6 +1,5 @@
 
 
-
 ## Meaning of Melspectrogram
 Studies have shown that humans do not perceive frequencies on a linear scale. 
 We are better at detecting differences in lower frequencies than higher frequencies. 
@@ -36,3 +35,54 @@ This is called the mel scale. We perform a mathematical operation on frequencies
 
 
 ![a sample outlook of melspectrogram](https://github.com/krazyjoy/AI_CUP/blob/master/images/melspectrogram.PNG)
+
+
+## Medical Record Processing
+all columns $\rightarrow$ subset of relevant columns
+|          |       |        |                      |
+|----------|-------|--------|----------------------|
+|    'ID'  | 'Sex' |  'Age' | 'Narrow pitch range' |
+|'Decreased volume' | 'Fatigue' | 'Dryness' | 'Lumping' | 
+|'heartburn' | 'Choking' | 'Eye dryness' | 'PND' |
+| 'Smoking' | 'PPD' | 'Drinking' | 'frequency'|
+| 'Diurnal pattern' | 'Onset of dysphonia' | 'Noise at work' | 'Occupational vocal demand' |
+|'Head injury' | 'CVA'|'Voice handicap index - 10'| 'Disease category' |
+
+- 'Disease category' is the classification column
+
+## CNN Model
+The model summary for custom CNN model.<br>
+
+![cnn model|300](https://github.com/krazyjoy/AI_CUP/blob/master/images/cnn_model_summary.PNG)
+
+- optimizer: nadam
+- minimum lr: 1e-8
+- loss: categorical cross entropy
+- validation ratio: 5%
+- callback: reduce lr on validation loss and early stopping after 10 epochs
+- save checkpoint: True
+
+![stft training under 2d cnn model](https://github.com/krazyjoy/AI_CUP/blob/master/images/accuracy_and_loss.PNG)
+
+
+## DNN Model
+The model summary for DNN model.<br>
+![dnn model summary](https://github.com/krazyjoy/AI_CUP/blob/master/images/dnn_model_summary.PNG)
+- hidden layers: 3
+- activation function: sigmoid (hidden nodes), softmax (categorical prediction)
+- loss: categorical corss entropy
+- optimizer: adam
+- metrics: accuracy
+
+## Results UAR and Confusion Matrix
+ 
+|  testing data  |   UAR    | 
+|----------------|----------|
+|    public      | 0.687    |
+|    private     | 0.543    |
+<br>
+
+![test public results](https://github.com/krazyjoy/AI_CUP/blob/master/images/test_public.PNG)
+![test private results](https://github.com/krazyjoy/AI_CUP/blob/master/images/test_private.PNG)
+
+
