@@ -1,5 +1,5 @@
 ## Workflow
-![architecture](https://github.com/krazyjoy/AI_CUP/blob/master/images/workflow.PNG)
+![architecture](https://github.com/krazyjoy/AI_CUP/blob/master/images/workflow.png)
 
 ## Meaning of Melspectrogram
 Studies have shown that humans do not perceive frequencies on a linear scale. 
